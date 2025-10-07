@@ -1,0 +1,81 @@
+:root {
+	--background: #121212;
+	--highlight-background: #000;
+	--highlight-foreground: #fb3f1e;
+	--primary: #e2e2e2;
+	--primary-foreground: #121212;
+}
+
+body {
+	background: var(--background);
+	color: var(--primary);
+	font-size: 20px;
+}
+
+::selection,
+.cm-highlight {
+	background-color: var(--highlight-background) !important;
+	color: #ffffff !important;
+}
+
+.workspace-tab-header.is-active::before,
+.workspace-tab-header.is-active::after {
+	display: none;
+}
+
+svg * {
+	stroke-linecap: square;
+	stroke-linejoin: miter;
+	rx: 0;
+	ry: 0;
+}
+
+.menu {
+	padding: var(--size-2-1);
+}
+
+.menu-item {
+	padding: var(--size-4-1) var(--size-4-2);
+}
+
+.menu-separator {
+	margin: var(--size-2-1) calc(var(--size-2-1) * -1);
+}
+
+strong,
+.cm-s-obsidian span.cm-formatting-strong,
+.cm-s-obsidian span.cm-strong {
+	color: var(--highlight-foreground) !important;
+	font-weight: 600;
+}
+
+img {
+	width: auto !important;
+	height: auto;
+	max-height: 240px;
+	border-radius: 0px !important;
+}
+
+.img-grid {
+	& img {
+		border: 2px solid transparent;
+	}
+}
+
+.task-list-item-checkbox {
+	border-radius: 4px !important;
+	text-decoration: line-through !important;
+	cursor: pointer;
+}
+
+.cm-line[data-task="x"] {
+	.cm-list-1 {
+		opacity: 0.5;
+		text-decoration: line-through;
+	}
+}
+
+.cm-s-obsidian .cm-strikethrough {
+	opacity: 0.5;
+	text-decoration: line-through;
+}
